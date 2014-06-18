@@ -16,6 +16,7 @@ r, g, b, and time are all integers
     $ blink2 devices //lists serial #'s of connected blink(1)'s
     $ blink2 fade time r g b //time in milliseconds
     $ blink2 set r g b //sets color to (r,g,b)
+    $ blink2 random //fades to random color
     $ blink2 rainbow //rotates through colors
     $ blink2 rainbow-time time //fades from color to color, total time is (6 * time)
     $ blink2 here //sets color to green
@@ -27,6 +28,7 @@ r, g, b, and time are all integers
 For blink(1) mk2
 
     $ blink2 fadeN time r g b n //n= 0 both leds, n=1 top led, n=2 bottom led
+    $ blink2 random2 // each led is set to a random color
 
 ### NEW COMMANDS
 to add new commands to blink2, modify lib/blink2.js
