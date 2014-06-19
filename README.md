@@ -6,7 +6,7 @@ blink2 is still not complete and is not tested for mk1's.
 
 ##### TODO:
 *  add pattern support for individual LEDs on the mk2
-*  finish making node-blink1 fully compatible with the mk2
+*  finish making node-blink1 fully compatible with the mk1
 
 ## Recommended usage
     $ git clone https://github.com/conchuirh/blink2.git
@@ -27,7 +27,7 @@ blink2 is still not complete and is not tested for mk1's.
 #### controls
 
     $ blink2 devices //lists serial #'s of connected blink(1)'s
-    $ blink2 fade time r g b //time in milliseconds
+    $ blink2 fade time r g b ledn //time in milliseconds, leave ledn empty for mk1
     $ blink2 set r g b //sets color to (r,g,b)
     $ blink2 play //plays current pattern from start
     $ blink2 writePatternLine time r g b pos //writes pattern to pos
@@ -44,7 +44,6 @@ blink2 is still not complete and is not tested for mk1's.
 
 #### For blink(1) mk2
 
-    $ blink2 fadeN time r g b ledn //fades ledn to rgb over time
     $ blink2 loop start end n //play pattern from pos start to pos end n times(n=0 is a repeating loop)
     $ blink2 savePattern //saves current pattern to flash memory
     $ blink2 random2 // each led is set to a random color
@@ -63,4 +62,17 @@ This command is called as blink2 busy, and it sets the color to red
       .action(function(){
         //code to run on command
         blink1.fadeToRGB(100, 255, 0, 0);//sets color to red over 100 milliseconds
+      });
+
+##### Pattern Example
+
+    program
+      .command('funk')
+      .description('play funk patter')
+      .action(function(){
+        blink1.writePatternLine(500, 200, 160, 0, 0);
+        blink1.writePatternLine(300, 0, 55, 200, 1);
+        blink1.writePatternLine(500, 230, 0, 200, 2);
+        blink1.writePatternLine(300, 0, 200, 130, 3);
+        blink1.playLoop(0, 3, 0);
       });

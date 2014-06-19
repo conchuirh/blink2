@@ -1,7 +1,7 @@
 {
   "name": "blink2",
   "description": "Simple command line utility for Blink(1) by ThingM",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "homepage": "https://github.com/conchuirh/blink2",
   "author": {
     "name": "Conor Hayes",
