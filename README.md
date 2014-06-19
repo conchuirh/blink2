@@ -49,6 +49,8 @@ blink2 is still not complete and is not tested for mk1's.
     $ blink2 savePattern //saves current pattern to flash memory
     $ blink2 random2 // each led is set to a random color
     $ blink2 rainbow //rotates through colors
+    $ blink2 funk
+    $ blink2 strobe
 
 ### NEW COMMANDS
 to add new commands to blink2, modify lib/blink2.js
