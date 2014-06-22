@@ -32,7 +32,7 @@ blink2 is still not complete and is not tested for mk1's.
     $ blink2 play //plays current pattern from start
     $ blink2 writePatternLine time r g b pos //writes pattern to pos
     $ blink2 readPatternLine pos //gets pattern line at pos
-    $ blink2 off //turns off light and closes HID connection 
+    $ blink2 off //turns off light and closes HID connection
 
 #### color commands  
 
@@ -51,6 +51,10 @@ blink2 is still not complete and is not tested for mk1's.
     $ blink2 rainbow //rotates through colors
     $ blink2 funk
     $ blink2 strobe
+
+#### Special commands
+
+    $ blink2 worldcup
 
 ### NEW COMMANDS
 to add new commands to blink2, modify lib/blink2.js

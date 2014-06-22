@@ -23,9 +23,15 @@
     "commander": "^2.2.0",
     "node-blink1": "^0.1.2"
   },
-  "keywords": ["blink1", "thingm"],
+  "keywords": [
+    "blink1",
+    "thingm"
+  ],
   "preferGlobal": "true",
   "bin": {
     "blink2": "lib/blink2.js"
+  },
+  "devDependencies": {
+    "request-json": "^0.4.10"
   }
 }
